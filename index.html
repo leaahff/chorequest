@@ -1474,6 +1474,9 @@
                RESPONSIVE
                ============================================================ */
         @media(max-width:820px) {
+            .stats {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
             .hero {
                 flex-direction: column;
                 text-align: center;
@@ -1555,7 +1558,7 @@
                 font-size: 15px;
             }
             .stats {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(3, minmax(0, 1fr));
                 gap: 6px;
             }
             .stat b {
@@ -1609,7 +1612,8 @@
         }
         @media(max-width:420px) {
             .stats {
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 5px;
             }
             .badge-preview {
                 grid-template-columns: repeat(2, 1fr);
@@ -1637,6 +1641,14 @@
                 font-size: 16px;
             }
         }
+
+        @media(max-width:420px) {
+            .stat { padding: 10px 4px; min-width: 0; }
+            .stat .si { font-size: 16px; }
+            .stat b { font-size: 16px; }
+            .stat small { font-size: 8px; letter-spacing: .02em; white-space: nowrap; }
+        }
+
         @media(prefers-reduced-motion:reduce) {
             *,
             *::before,
